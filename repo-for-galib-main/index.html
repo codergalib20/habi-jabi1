@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Money Budgeting Webpage</title>
+    <!-- bootstrap CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- Font Awesome CDN  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- custom CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="text-primary">Monthly Budget Planner</h1>
+      <p>calculate your monthly budget with us</p>
+    </header>
+    <main>
+      <section class="container-fluid">
+        <div class="row">
+          <div class="col-md-6 col-sm-12">
+            <img class="img-fluid img" src="./images/image-2.jpg" alt="" />
+          </div>
+          <div class="col-md-6 col-sm-12 background">
+            <div>
+              <!----------------------- income section  ----------------->
+              <div>
+                <h3 class="mt-4">Income</h3>
+                <form>
+                  <label for="income-input">Income: </label>
+                  <input
+                    id="income-input"
+                    type="text"
+                    placeholder="  enter your income"
+                  />
+                </form>
+              </div>
+              <!----------------------- expenses section  ----------------->
+              <div>
+                <h3 class="my-4">Expenses</h3>
+                <form>
+                  <label for="income-input">Food: </label>
+                  <input
+                    id="food-input"
+                    type="text"
+                    placeholder="  food expenses"
+                  />
+                  <br />
+                  <br />
+                  <label for="rent-input">Rent: </label>
+                  <input
+                    id="rent-input"
+                    type="text"
+                    placeholder="  rent expenses"
+                  />
+                  <br />
+                  <br />
+                  <label for="others-input">Others: </label>
+                  <input
+                    id="others-input"
+                    type="text"
+                    placeholder="  others expenses"
+                  />
+                </form>
+              </div>
+
+              <!------------- calculation section  ------------>
+              <button
+                id="calculate-btn"
+                type="button"
+                class="btn btn-primary my-4 fw-bold px-5"
+              >
+                Calculate
+              </button>
+              <!-- error messages -->
+              <div>
+                <span id="errorShow" class="d-block py-4"></span>
+              </div>
+
+              <h3>Total Expenses: <span id="total-expenses">00</span></h3>
+              <h4>Balance: <span id="balance-field">00</span></h4>
+            </div>
+            <!------------ savings section  ------->
+            <div class="my-3">
+              <label for="save-input"> Save:</label>
+              <input id="save-input" type="text" />
+              <span class="mx-3"> %</span>
+
+              <button
+                id="save-btn"
+                type="button"
+                class="btn btn-primary mb-2 fw-bold px-4 py-1 m"
+              >
+                Save
+              </button>
+              <h3 class="my-2">
+                Saving Amount: <span id="save-amount">00</span>
+              </h3>
+              <h3>Remaining Balance: <span id="rest-balance">00</span></h3>
+            </div>
+            <!--  -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- js script link  -->
+    <script src="./js/app.js"></script>
+  </body>
+</html>
+
+<!--
+     git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Porgramming-Hero-web-course/money-master-arifphero4.git
+git push -u origin main 
+-->
